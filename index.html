@@ -5,10 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Kazi Morwan" />
         <title>Ticker - AI</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        />
         <link rel="stylesheet" href="./src/main.css" />
     </head>
 
     <body>
+        <!-- Header Section -->
         <header class="p-2 md:px-14 md:py-4">
             <nav class="flex items-center justify-between w-full">
                 <div class="flex items-center gap-1 md:gap-3">
@@ -57,5 +62,32 @@
                 </div>
             </nav>
         </header>
+
+        <!-- Banner Section -->
+        <section
+            class="flex flex-col items-center justify-center px-4 md:px-0 py-20 md:py-32 bg-[url('/src/img/banner.jpg')] bg-top bg-cover"
+        >
+            <h1
+                class="text-3xl md:text-7xl font-bold italic bg-white px-2 [text-shadow:_-5px_1px_0_rgb(0_0_0_/_40%)]"
+            >
+                tickerAI
+            </h1>
+
+            <div
+                class="flex items-center gap-4 mt-4 md:mt-10 bg-white w-4/5 md:w-3/5 xl:w-1/2 p-2 md:p-4 rounded hover:ring shadow-lg divide-x-2"
+            >
+                <i class="fa fa-search text-lg"></i>
+                <input
+                    class="size-full outline-none px-3"
+                    type="search"
+                    name="search"
+                    placeholder="Search any market topic..."
+                />
+            </div>
+
+            <p class="text-gray-300 mt-2 md:mt-4 font-semibold">
+                There are 6 articles available for your preferences
+            </p>
+        </section>
     </body>
 </html>
