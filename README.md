@@ -4,6 +4,8 @@
 
 ### [Visit us ➡️ Ticker_AI](https://kazimorwan498.github.io/Ticker_AI/)
 
+### [Visit us on Netlify ➡️ Ticker_AI](https://kazimorwan498-ticker-ai.netlify.app/)
+
 ## 💫 About Me
 
 Assalamu Alaikum, how are you? I hope you are well.
