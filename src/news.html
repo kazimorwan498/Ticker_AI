@@ -113,5 +113,14 @@
         <footer class="text-nightRider text-center p-5 w-full dark:text-white">
             Copyright &copy; 2024 All right reserved to Ticker AI.
         </footer>
+
+        <script>
+            const htmlTag = document.getElementById("html-tag"),
+                modeSwitch = document.getElementById("mode-switch");
+
+            modeSwitch.addEventListener("click", function () {
+                htmlTag.classList.toggle("dark");
+            });
+        </script>
     </body>
 </html>
