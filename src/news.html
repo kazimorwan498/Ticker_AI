@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" id="html-tag">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Kazi Morwan" />
+        <title>News - Ticker AI</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./img/favicon.ico"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="./main.css" />
+        <script src="./index.js" defer></script>
+    </head>
+
+    <body class="bg-white dark:bg-gray-900">
+        <!-- Header Section -->
+        <header class="p-2 md:px-14 md:py-4">
+            <nav class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-1 md:gap-3">
+                    <img
+                        class="w-12 md:w-fit cursor-pointer"
+                        src="./img/tickerAI-logo.png"
+                        alt="Logo"
+                        onclick="window.location.href = '../index.html'"
+                    />
+                    <p class="text-[8px] md:text-xs dark:text-white">
+                        A Mark Cuban Company <br />
+                        AI-based Financial Market News Aggregator
+                    </p>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 md:gap-7">
+                    <a href="../index.html">
+                        <button
+                            class="bg-sanMarino text-white text-xs md:text-base py-1 md:py-3 px-2 md:px-6 font-semibold rounded-md hover:bg-mariner hover:scale-105 transition-all"
+                        >
+                            Personalize News
+                        </button>
+                    </a>
+
+                    <div
+                        class="flex items-center justify-center text-sanMarino dark:text-wildBlueYonder bg-gray-300 dark:bg-slate-800 text-lg md:text-2xl font-bold size-12 rounded-full leano hover:scale-105 transition-all cursor-pointer pb-0.5"
+                    >
+                        IK
+                    </div>
+
+                    <button id="mode-switch">
+                        <svg
+                            class="size-6 dark:stroke-white hover:scale-105 transition-all duration-300"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-6"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                            />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Personalise News -->
+        <section class="bg-dimGray/20 px-4 w-full min-h-screen">
+            <section class="container mx-auto md:py-12 py-8">
+                <div
+                    class="flex items-center justify-between pb-1 md:pb-2.5 border-b-[3px] border-nightRider dark:border-white md:mx-16"
+                >
+                    <h3
+                        class="text-lg md:text-xl font-semibold text-nightRider dark:text-white uppercase"
+                    >
+                        Personalise your news
+                    </h3>
+                </div>
+
+                <section
+                    class="bg-white dark:bg-gray-700 max-w-lg mx-auto md:mt-10 mt-6 p-10 rounded"
+                >
+                    <h3
+                        class="text-lg md:text-2xl font-semibold text-center text-nightRider dark:text-white mb-5"
+                    >
+                        Select your Markets
+                    </h3>
+
+                    <div class="py-5 space-y-5">
+                        <button class="news-btn">Stocks</button>
+                        <button class="news-btn">Crypto</button>
+                        <button class="news-btn">Economy & Business</button>
+                        <button class="news-btn">Commodities | Forex</button>
+                        <button class="news-btn">Fixed Income</button>
+                    </div>
+                    <button
+                        class="bg-sanMarino w-full py-2 md:py-4 rounded-md text-white font-medium md:text-lg hover:bg-mariner transition-all duration-300 hover:scale-105"
+                    >
+                        Continue
+                    </button>
+                </section>
+            </section>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="text-nightRider text-center p-5 w-full dark:text-white">
+            Copyright &copy; 2024 All right reserved to Ticker AI.
+        </footer>
+    </body>
+</html>
