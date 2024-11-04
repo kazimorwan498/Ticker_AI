@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark" id="html-tag">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Kazi Morwan" />
-        <title>Ticker - AI</title>
+        <title>Ticker AI</title>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         />
+        <link
+            rel="shortcut icon"
+            href="./src/img/favicon.ico"
+            type="image/x-icon"
+        />
         <link rel="stylesheet" href="./src/main.css" />
+        <script src="./src/index.js" defer></script>
     </head>
 
-    <body>
+    <body class="bg-white dark:bg-gray-900">
         <!-- Header Section -->
         <header class="p-2 md:px-14 md:py-4">
             <nav class="flex items-center justify-between w-full">
@@ -22,14 +28,16 @@
                         src="./src/img/tickerAI-logo.png"
                         alt="Logo"
                     />
-                    <p class="text-[8px] md:text-xs">
+                    <p
+                        class="text-[8px] md:text-xs text-nightRider dark:text-white"
+                    >
                         A Mark Cuban Company <br />
                         AI-based Financial Market News Aggregator
                     </p>
                 </div>
 
                 <div class="flex items-center justify-center gap-2 md:gap-7">
-                    <a href="#">
+                    <a href="./src/news.html">
                         <button
                             class="bg-sanMarino text-white text-xs md:text-base py-1 md:py-3 px-2 md:px-6 font-semibold rounded-md hover:bg-mariner hover:scale-105 transition-all"
                         >
@@ -38,13 +46,14 @@
                     </a>
 
                     <div
-                        class="flex items-center justify-center text-sanMarino bg-gray-300 text-lg md:text-2xl font-bold size-12 rounded-full hover:scale-105 transition-all cursor-pointer"
+                        class="flex items-center justify-center text-sanMarino dark:text-wildBlueYonder bg-gray-300 dark:bg-slate-800 text-lg md:text-2xl font-bold size-12 rounded-full leano hover:scale-105 transition-all cursor-pointer pb-0.5"
                     >
                         IK
                     </div>
 
-                    <button>
+                    <button id="mode-switch">
                         <svg
+                            class="size-6 dark:stroke-white hover:scale-105 transition-all duration-300"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -68,7 +77,7 @@
             class="flex flex-col items-center justify-center px-4 md:px-0 py-20 md:py-32 bg-[url('/src/img/banner.jpg')] bg-top bg-cover"
         >
             <h1
-                class="text-3xl md:text-7xl font-bold italic bg-white px-2 [text-shadow:_-5px_1px_0_rgb(0_0_0_/_40%)]"
+                class="text-nightRider text-3xl md:text-7xl font-bold italic bg-white px-2 [text-shadow:_-5px_1px_0_rgb(0_0_0_/_40%)]"
             >
                 tickerAI
             </h1>
@@ -85,44 +94,48 @@
                 />
             </div>
 
-            <p class="text-gray-300 mt-2 md:mt-4 font-semibold">
+            <p class="text-gray-300 mt-2 md:mt-4 font-semibold text-center">
                 There are 6 articles available for your preferences
             </p>
         </section>
 
         <!-- News Section -->
         <section
-            class="container grid grid-cols-12 gap-8 mx-auto mb-8 px-4 md:px-0 pt-10"
+            class="container grid grid-cols-12 lg:justify-items-center gap-8 mx-auto mb-8 px-4 md:px-0 pt-10"
         >
             <!-- All News Section -->
-            <section class="col-span-full lg:col-span-9 md:ml-8">
+            <section class="col-span-full lg:col-span-9 dark:text-white">
                 <div
-                    class="flex items-center justify-between md:pb-3 border-b-[3px] px-2 border-nightRider"
+                    class="flex items-center justify-between md:pb-3 border-b-[3px] px-2 border-nightRider dark:border-white"
                 >
                     <h2
-                        class="text-lg md:text-2xl text-nightRider font-semibold uppercase"
+                        class="text-lg md:text-2xl text-nightRider dark:text-white font-semibold uppercase"
                     >
                         All news
                     </h2>
 
-                    <div class="flex items-center gap-2 text-nightRider">
+                    <div
+                        class="flex items-center gap-2 text-nightRide dark:text-white"
+                    >
                         <p>Filter by</p>
-                        <span class="font-bold">Stocks</span>
-                        <i class="fa-solid fa-chevron-down"></i>
+                        <span class="font-bold cursor-pointer">
+                            Stocks
+                            <i
+                                class="fa-solid fa-chevron-down ml-3 cursor-pointer"
+                            ></i>
+                        </span>
                     </div>
                 </div>
 
                 <!-- Card Section 01 -->
                 <section class="space-y-5">
                     <h3
-                        class="text-nightRider text-xl md:text-2xl my-4 md:mt-8 font-bold"
+                        class="text-nightRider dark:text-white text-xl md:text-2xl my-4 md:mt-8 font-bold"
                     >
                         Individual Stocks
                     </h3>
                     <!-- Card 01 -->
-                    <div
-                        class="flex flex-col items-center gap-6 md:flex-row p-2 md:p-4 border border-dimGray/50 hover:scale-105 transition-all duration-300 cursor-pointer"
-                    >
+                    <div class="blog">
                         <img
                             class="w-full h-44 object-cover md:h-fit md:size-full lg:size-[200px]"
                             src="./src/img/blog_01.jpg"
@@ -135,14 +148,16 @@
                                 <span class="caption">S & P 500</span>
                             </div>
 
-                            <h3
-                                class="md:text-lg font-semibold text-nightRider pb-1"
+                            <h4
+                                class="md:text-lg font-semibold text-nightRider dark:text-white pb-1"
                             >
                                 Nzd/usd forex technical analysis - traders will
                                 be monitoring fed for future rate hike clues
-                            </h3>
+                            </h4>
 
-                            <p class="text-sm md:text-base text-dimGray">
+                            <p
+                                class="text-sm md:text-base text-dimGray dark:text-white/50"
+                            >
                                 Amet minim mollit non deserunt ullamco est sit
                                 aliqua dolor do amet sint. Velit officia
                                 consequat duis enim velit mollit. Exercitation
@@ -150,7 +165,7 @@
                             </p>
 
                             <div class="space-x-5 text-sm md:text-base">
-                                <span class="text-dimGray"
+                                <span class="text-dimGray dark:text-white/50"
                                     >06 September 2022</span
                                 >
                                 <span class="text-nightRider">
@@ -166,9 +181,7 @@
                     </div>
 
                     <!-- Card 02 -->
-                    <div
-                        class="flex flex-col items-center gap-6 md:flex-row p-2 md:p-4 border border-dimGray/50 hover:scale-105 transition-all duration-300 cursor-pointer"
-                    >
+                    <div class="blog">
                         <img
                             class="w-full h-44 object-cover md:h-fit md:size-full lg:size-[200px]"
                             src="./src/img/blog_02.jpg"
@@ -181,14 +194,16 @@
                                 <span class="caption">S & P 500</span>
                             </div>
 
-                            <h3
-                                class="md:text-lg font-semibold text-nightRider pb-1"
+                            <h4
+                                class="md:text-lg font-semibold text-nightRider dark:text-white pb-1"
                             >
                                 Rupee inches 5 paise higher to 77.99 against us
                                 dollar in early trade
-                            </h3>
+                            </h4>
 
-                            <p class="text-sm md:text-base text-dimGray">
+                            <p
+                                class="text-sm md:text-base text-dimGray dark:text-white/50"
+                            >
                                 Amet minim mollit non deserunt ullamco est sit
                                 aliqua dolor do amet sint. Velit officia
                                 consequat duis enim velit mollit. Exercitation
@@ -196,7 +211,7 @@
                             </p>
 
                             <div class="space-x-5 text-sm md:text-base">
-                                <span class="text-dimGray"
+                                <span class="text-dimGray dark:text-white/50"
                                     >06 September 2022</span
                                 >
                                 <span class="text-nightRider">
@@ -212,9 +227,7 @@
                     </div>
 
                     <!-- Card 03 -->
-                    <div
-                        class="flex flex-col items-center gap-6 md:flex-row p-2 md:p-4 border border-dimGray/50 hover:scale-105 transition-all duration-300 cursor-pointer"
-                    >
+                    <div class="blog">
                         <img
                             class="w-full h-44 object-cover md:h-fit md:size-full lg:size-[200px]"
                             src="./src/img/blog_03.jpg"
@@ -227,14 +240,16 @@
                                 <span class="caption">S & P 500</span>
                             </div>
 
-                            <h3
-                                class="md:text-lg font-semibold text-nightRider pb-1"
+                            <h4
+                                class="md:text-lg font-semibold text-nightRider dark:text-white pb-1"
                             >
                                 Rupee inches 5 paise higher to 77.99 against us
                                 dollar in early trade
-                            </h3>
+                            </h4>
 
-                            <p class="text-sm md:text-base text-dimGray">
+                            <p
+                                class="text-sm md:text-base text-dimGray dark:text-white/50"
+                            >
                                 Amet minim mollit non deserunt ullamco est sit
                                 aliqua dolor do amet sint. Velit officia
                                 consequat duis enim velit mollit. Exercitation
@@ -242,7 +257,7 @@
                             </p>
 
                             <div class="space-x-5 text-sm md:text-base">
-                                <span class="text-dimGray"
+                                <span class="text-dimGray dark:text-white/50"
                                     >06 September 2022</span
                                 >
                                 <span class="text-nightRider">
@@ -261,14 +276,12 @@
                 <!-- Card Section 02 -->
                 <section class="space-y-5">
                     <h3
-                        class="text-nightRider text-xl md:text-2xl my-4 md:mt-8 font-bold"
+                        class="text-nightRider dark:text-white text-xl md:text-2xl my-4 md:mt-8 font-bold"
                     >
                         Stock Sectors
                     </h3>
                     <!-- Card 01 -->
-                    <div
-                        class="flex flex-col items-center gap-6 md:flex-row p-2 md:p-4 border border-dimGray/50 hover:scale-105 transition-all duration-300 cursor-pointer"
-                    >
+                    <div class="blog">
                         <img
                             class="w-full h-44 object-cover md:h-fit md:size-full lg:size-[200px]"
                             src="./src/img/blog_04.jpg"
@@ -281,14 +294,16 @@
                                 <span class="caption">S & P 500</span>
                             </div>
 
-                            <h3
-                                class="md:text-lg font-semibold text-nightRider pb-1"
+                            <h4
+                                class="md:text-lg font-semibold text-nightRider dark:text-white pb-1"
                             >
                                 Nzd/usd forex technical analysis - traders will
                                 be monitoring fed for future rate hike clues
-                            </h3>
+                            </h4>
 
-                            <p class="text-sm md:text-base text-dimGray">
+                            <p
+                                class="text-sm md:text-base text-dimGray dark:text-white/50"
+                            >
                                 Amet minim mollit non deserunt ullamco est sit
                                 aliqua dolor do amet sint. Velit officia
                                 consequat duis enim velit mollit. Exercitation
@@ -296,7 +311,7 @@
                             </p>
 
                             <div class="space-x-5 text-sm md:text-base">
-                                <span class="text-dimGray"
+                                <span class="text-dimGray dark:text-white/50"
                                     >06 September 2022</span
                                 >
                                 <span class="text-nightRider">
@@ -312,9 +327,7 @@
                     </div>
 
                     <!-- Card 02 -->
-                    <div
-                        class="flex flex-col items-center gap-6 md:flex-row p-2 md:p-4 border border-dimGray/50 hover:scale-105 transition-all duration-300 cursor-pointer"
-                    >
+                    <div class="blog">
                         <img
                             class="w-full h-44 object-cover md:h-fit md:size-full lg:size-[200px]"
                             src="./src/img/blog_05.jpg"
@@ -327,14 +340,16 @@
                                 <span class="caption">S & P 500</span>
                             </div>
 
-                            <h3
-                                class="md:text-lg font-semibold text-nightRider pb-1"
+                            <h4
+                                class="md:text-lg font-semibold text-nightRider dark:text-white pb-1"
                             >
                                 Rupee inches 5 paise higher to 77.99 against us
                                 dollar in early trade
-                            </h3>
+                            </h4>
 
-                            <p class="text-sm md:text-base text-dimGray">
+                            <p
+                                class="text-sm md:text-base text-dimGray dark:text-white/50"
+                            >
                                 Amet minim mollit non deserunt ullamco est sit
                                 aliqua dolor do amet sint. Velit officia
                                 consequat duis enim velit mollit. Exercitation
@@ -342,7 +357,7 @@
                             </p>
 
                             <div class="space-x-5 text-sm md:text-base">
-                                <span class="text-dimGray"
+                                <span class="text-dimGray dark:text-white/50"
                                     >06 September 2022</span
                                 >
                                 <span class="text-nightRider">
@@ -361,14 +376,12 @@
                 <!-- Card Section 03 -->
                 <section class="space-y-5">
                     <h3
-                        class="text-nightRider text-xl md:text-2xl my-4 md:mt-8 font-bold"
+                        class="text-nightRider dark:text-white text-xl md:text-2xl my-4 md:mt-8 font-bold"
                     >
                         Stock Market Topics
                     </h3>
                     <!-- Card 01 -->
-                    <div
-                        class="flex flex-col items-center gap-6 md:flex-row p-2 md:p-4 border border-dimGray/50 hover:scale-105 transition-all duration-300 cursor-pointer"
-                    >
+                    <div class="blog">
                         <img
                             class="w-full h-44 object-cover md:h-fit md:size-full lg:size-[200px]"
                             src="./src/img/blog_06.jpg"
@@ -381,14 +394,16 @@
                                 <span class="caption">S & P 500</span>
                             </div>
 
-                            <h3
-                                class="md:text-lg font-semibold text-nightRider pb-1"
+                            <h4
+                                class="md:text-lg font-semibold text-nightRider dark:text-white pb-1"
                             >
                                 Nzd/usd forex technical analysis - traders will
                                 be monitoring fed for future rate hike clues
-                            </h3>
+                            </h4>
 
-                            <p class="text-sm md:text-base text-dimGray">
+                            <p
+                                class="text-sm md:text-base text-dimGray dark:text-white/50"
+                            >
                                 Amet minim mollit non deserunt ullamco est sit
                                 aliqua dolor do amet sint. Velit officia
                                 consequat duis enim velit mollit. Exercitation
@@ -396,7 +411,7 @@
                             </p>
 
                             <div class="space-x-5 text-sm md:text-base">
-                                <span class="text-dimGray"
+                                <span class="text-dimGray dark:text-white/50"
                                     >06 September 2022</span
                                 >
                                 <span class="text-nightRider">
@@ -414,7 +429,118 @@
             </section>
 
             <!-- Features Section -->
-            <section class="col-span-full lg:col-span-3 md:mr-8"></section>
+            <section class="col-span-full lg:col-span-3">
+                <h2
+                    class="md:pb-3 border-b-[3px] px-2 border-nightRider dark:border-white text-lg md:text-2xl text-nightRider dark:text-white font-semibold uppercase"
+                >
+                    Featured
+                </h2>
+
+                <h3
+                    class="text-nightRider dark:text-white text-xl md:text-2xl my-4 md:mt-8 font-bold"
+                >
+                    Daily Rundowns
+                </h3>
+
+                <!-- Tag Section -->
+                <div
+                    class="border border-dimGray/20 dark:border-white/50 p-5 space-y-5"
+                >
+                    <div>
+                        <h5 class="dark:text-white font-medium pb-4">
+                            Earnings:
+                        </h5>
+
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tag">Csan</span>
+                            <span class="tag">Alya</span>
+                            <span class="tag">Gato</span>
+                            <span class="tag">Css</span>
+                            <span class="tag">VZLA</span>
+                            <span class="tag">MFH</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h5 class="dark:text-white font-medium pb-4">
+                            Movers:
+                        </h5>
+
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tag">rev</span>
+                            <span class="tag">petv</span>
+                            <span class="tag">rytm</span>
+                            <span class="tag">srrk</span>
+                            <span class="tag">vera</span>
+                            <span class="tag">kzia</span>
+                            <span class="tag">sym</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h5 class="dark:text-white font-medium pb-4">
+                            Technicals:
+                        </h5>
+
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tag">bearish</span>
+                            <span class="tag">regn</span>
+                            <span class="tag">tsla</span>
+                            <span class="tag">mcd</span>
+                            <span class="tag">bullish</span>
+                            <span class="tag">uso</span>
+                            <span class="tag">sedg</span>
+                            <span class="tag">enph</span>
+                            <span class="tag">shop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- img gallery -->
+                <div class="mt-5">
+                    <img
+                        class="w-full object-cover"
+                        src="./src/img/feature_01.jpg"
+                        alt="feature_img"
+                    />
+                    <p
+                        class="font-medium text-nightRider dark:text-white p-4 text-center"
+                    >
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint.
+                    </p>
+                </div>
+
+                <!-- img gallery -->
+                <div class="mt-5">
+                    <img
+                        class="w-full object-cover"
+                        src="./src/img/feature_02.jpg"
+                        alt="feature_img"
+                    />
+                    <p
+                        class="font-medium text-nightRider dark:text-white p-4 text-center"
+                    >
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint.
+                    </p>
+                </div>
+
+                <!-- img gallery -->
+                <div class="mt-5">
+                    <img
+                        class="w-full object-cover"
+                        src="./src/img/feature_03.jpg"
+                        alt="feature_img"
+                    />
+                    <p
+                        class="font-medium text-nightRider dark:text-white p-4 text-center"
+                    >
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint.
+                    </p>
+                </div>
+            </section>
         </section>
     </body>
 </html>

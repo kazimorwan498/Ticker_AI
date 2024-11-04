@@ -3,7 +3,19 @@
 @tailwind utilities;
 
 @layer utilities {
+    .blog {
+        @apply flex flex-col items-center gap-6 md:flex-row p-2 md:p-4 border border-dimGray/50 dark:border-white hover:scale-105 transition-all duration-300 cursor-pointer
+    }
+    
     .caption {
-        @apply bg-nightRider text-white text-xs uppercase px-2 py-1 rounded;
+        @apply bg-nightRider dark:bg-sanMarino text-white text-xs uppercase px-2 py-1 rounded;
+    }
+
+    .tag {
+        @apply bg-dimGray/20 text-nightRider dark:text-white text-xs md:text-sm px-1.5 py-0.5 rounded-sm uppercase hover:bg-nightRider hover:text-white cursor-pointer transition-all duration-300;
+    }
+
+    .news-btn {
+        @apply bg-dimGray/20 text-nightRider dark:text-white text-center w-full rounded-full py-2 md:py-4 font-medium md:text-lg hover:bg-slate-300 dark:hover:bg-slate-600 hover:scale-105 transition-all duration-200
     }
 }

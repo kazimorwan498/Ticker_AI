@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./index.html"],
+    darkMode: "class",
+    content: ["./index.html", "./src/news.html"],
     theme: {
         extend: {
             colors: {
@@ -8,6 +9,7 @@ module.exports = {
                 mariner: "rgb(66,102,158)",
                 nightRider: "rgb(51, 51, 51)",
                 dimGray: "rgba(97, 97, 97, 1)",
+                wildBlueYonder: "rgb(116, 148, 203)",
             },
         },
     },
