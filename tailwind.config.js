@@ -6,6 +6,8 @@ module.exports = {
             colors: {
                 sanMarino: "rgb(86, 119, 172)",
                 mariner: "rgb(66,102,158)",
+                nightRider: "rgb(51, 51, 51)",
+                dimGray: "rgba(97, 97, 97, 1)",
             },
         },
     },
