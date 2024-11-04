@@ -20,55 +20,56 @@
 
     <body class="bg-white dark:bg-gray-900">
         <!-- Header Section -->
-        <header class="p-2 md:px-14 md:py-4">
-            <nav class="flex items-center justify-between w-full">
-                <div class="flex items-center gap-1 md:gap-3">
-                    <img
-                        class="w-12 md:w-fit cursor-pointer"
-                        src="./img/tickerAI-logo.png"
-                        alt="Logo"
-                        onclick="window.location.href = '../index.html'"
-                    />
-                    <p class="text-[8px] md:text-xs dark:text-white">
-                        A Mark Cuban Company <br />
-                        AI-based Financial Market News Aggregator
-                    </p>
-                </div>
+        <header
+            class="flex items-center justify-between w-full p-2 md:px-14 md:py-4"
+        >
+            <div class="flex items-center gap-1 md:gap-3">
+                <img
+                    class="h-full rounded"
+                    src="./img/tickerAI-logo.png"
+                    alt="Logo"
+                />
+                <p
+                    class="hidden sm:inline-block text-xs text-nightRider dark:text-white"
+                >
+                    A Mark Cuban Company <br />
+                    AI-based Financial Market News Aggregator
+                </p>
+            </div>
 
-                <div class="flex items-center justify-center gap-2 md:gap-7">
-                    <a href="../index.html">
-                        <button
-                            class="bg-sanMarino text-white text-xs md:text-base py-1 md:py-3 px-2 md:px-6 font-semibold rounded-md hover:bg-mariner hover:scale-105 transition-all"
-                        >
-                            Personalize News
-                        </button>
-                    </a>
-
-                    <div
-                        class="flex items-center justify-center text-sanMarino dark:text-wildBlueYonder bg-gray-300 dark:bg-slate-800 text-lg md:text-2xl font-bold size-12 rounded-full leano hover:scale-105 transition-all cursor-pointer pb-0.5"
+            <div class="flex items-center justify-center gap-2 md:gap-7">
+                <a href="../index.html">
+                    <button
+                        class="bg-sanMarino text-white text-xs md:text-base py-3 px-2 md:px-6 font-semibold rounded-md hover:bg-mariner hover:scale-105 transition-all text-nowrap"
                     >
-                        IK
-                    </div>
-
-                    <button id="mode-switch">
-                        <svg
-                            class="size-6 dark:stroke-white hover:scale-105 transition-all duration-300"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-6"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-                            />
-                        </svg>
+                        Personalize News
                     </button>
+                </a>
+
+                <div
+                    class="flex items-center justify-center text-sanMarino dark:text-wildBlueYonder bg-gray-300 dark:bg-slate-800 text-md md:text-2xl font-bold size-10 sm:size-10 rounded-full leano hover:scale-105 transition-all cursor-pointer pb-0.5"
+                >
+                    IK
                 </div>
-            </nav>
+
+                <button id="mode-switch">
+                    <svg
+                        class="size-6 dark:stroke-white hover:scale-105 transition-all duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-6"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                        />
+                    </svg>
+                </button>
+            </div>
         </header>
 
         <!-- Personalize News -->

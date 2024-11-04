@@ -16,6 +16,15 @@
     }
 
     .news-btn {
-        @apply bg-dimGray/20 text-nightRider dark:text-white text-center w-full rounded-full py-2 md:py-4 font-medium md:text-lg hover:bg-slate-300 dark:hover:bg-slate-600 hover:scale-105 transition-all duration-200;
+        @apply bg-dimGray/20 text-nightRider dark:text-white text-center w-full rounded-full py-3 sm:py-4 font-medium md:text-lg hover:bg-slate-300 dark:hover:bg-slate-600 hover:scale-105 transition-all duration-200;
     }
+}
+
+::-webkit-search-cancel-button {
+    appearance: none;
+    content: url("https://icons.iconarchive.com/icons/fa-team/fontawesome/256/FontAwesome-Xmark-icon.png");
+    height: 20px;
+    width: 20px;
+    filter: contrast(0);
+    cursor: pointer;
 }

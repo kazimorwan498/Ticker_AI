@@ -20,56 +20,56 @@
 
     <body class="bg-white dark:bg-gray-900">
         <!-- Header Section -->
-        <header class="p-2 md:px-14 md:py-4">
-            <nav class="flex items-center justify-between w-full">
-                <div class="flex items-center gap-1 md:gap-3">
-                    <img
-                        class="w-12 md:w-fit"
-                        src="./src/img/tickerAI-logo.png"
-                        alt="Logo"
-                    />
-                    <p
-                        class="text-[8px] md:text-xs text-nightRider dark:text-white"
+        <header
+            class="flex items-center justify-between w-full p-2 md:px-14 md:py-4"
+        >
+            <div class="flex items-center gap-1 md:gap-3">
+                <img
+                    class="h-full rounded"
+                    src="./src/img/tickerAI-logo.png"
+                    alt="Logo"
+                />
+                <p
+                    class="hidden sm:inline-block text-xs text-nightRider dark:text-white"
+                >
+                    A Mark Cuban Company <br />
+                    AI-based Financial Market News Aggregator
+                </p>
+            </div>
+
+            <div class="flex items-center justify-center gap-2 md:gap-7">
+                <a href="./news.html">
+                    <button
+                        class="bg-sanMarino text-white text-xs md:text-base py-3 px-2 md:px-6 font-semibold rounded-md hover:bg-mariner hover:scale-105 transition-all text-nowrap"
                     >
-                        A Mark Cuban Company <br />
-                        AI-based Financial Market News Aggregator
-                    </p>
-                </div>
-
-                <div class="flex items-center justify-center gap-2 md:gap-7">
-                    <a href="./src/news.html">
-                        <button
-                            class="bg-sanMarino text-white text-xs md:text-base py-1 md:py-3 px-2 md:px-6 font-semibold rounded-md hover:bg-mariner hover:scale-105 transition-all"
-                        >
-                            Personalize News
-                        </button>
-                    </a>
-
-                    <div
-                        class="flex items-center justify-center text-sanMarino dark:text-wildBlueYonder bg-gray-300 dark:bg-slate-800 text-lg md:text-2xl font-bold size-12 rounded-full leano hover:scale-105 transition-all cursor-pointer pb-0.5"
-                    >
-                        IK
-                    </div>
-
-                    <button id="mode-switch">
-                        <svg
-                            class="size-6 dark:stroke-white hover:scale-105 transition-all duration-300"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-6"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-                            />
-                        </svg>
+                        Personalize News
                     </button>
+                </a>
+
+                <div
+                    class="flex items-center justify-center text-sanMarino dark:text-wildBlueYonder bg-gray-300 dark:bg-slate-800 text-md md:text-2xl font-bold size-10 sm:size-10 rounded-full leano hover:scale-105 transition-all cursor-pointer pb-0.5"
+                >
+                    IK
                 </div>
-            </nav>
+
+                <button id="mode-switch">
+                    <svg
+                        class="size-6 dark:stroke-white hover:scale-105 transition-all duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-6"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                        />
+                    </svg>
+                </button>
+            </div>
         </header>
 
         <!-- Banner Section -->
@@ -77,20 +77,21 @@
             class="flex flex-col items-center justify-center px-4 md:px-0 py-20 md:py-32 bg-[url('/src/img/banner.jpg')] bg-top bg-cover"
         >
             <h1
-                class="text-nightRider text-3xl md:text-7xl font-bold italic bg-white px-2 [text-shadow:_-5px_1px_0_rgb(0_0_0_/_40%)]"
+                class="text-nightRider dark:text-white text-3xl md:text-7xl font-bold italic bg-white dark:bg-nightRider px-4 pb-2 [text-shadow:_-5px_1px_0_rgb(0_0_0_/_40%)] dark:[text-shadow:_-5px_1px_0_rgb(255_255_255_/_40%)] border-2 border-nightRider dark:border-white"
             >
                 tickerAI
             </h1>
 
             <div
-                class="flex items-center gap-4 mt-4 md:mt-10 bg-white w-4/5 md:w-3/5 xl:w-1/2 p-2 md:p-4 rounded hover:ring shadow-lg divide-x-2"
+                class="flex items-center gap-4 mt-4 md:mt-10 bg-white dark:bg-nightRider dark:text-white w-4/5 md:w-3/5 xl:w-1/2 py-2 px-4 h-[60px] rounded hover:ring shadow-lg divide-x-2"
             >
                 <i class="fa-solid fa-magnifying-glass text-lg"></i>
                 <input
-                    class="size-full outline-none px-3"
+                    class="size-full outline-none px-3 bg-transparent"
                     type="search"
                     name="search"
                     placeholder="Search any market topic..."
+                    autocomplete="off"
                 />
             </div>
 
@@ -101,12 +102,12 @@
 
         <!-- News Section -->
         <section
-            class="container grid grid-cols-12 lg:justify-items-center gap-8 mx-auto mb-8 px-4 md:px-0 pt-10"
+            class="container grid grid-cols-12 lg:justify-items-center gap-8 mx-auto mb-8 px-4 pt-10"
         >
             <!-- All News Section -->
-            <section class="col-span-full lg:col-span-9 dark:text-white">
+            <section class="col-span-full lg:col-span-9 dark:text-white px-4">
                 <div
-                    class="flex items-center justify-between md:pb-3 border-b-[3px] px-2 border-nightRider dark:border-white"
+                    class="flex items-center justify-between pb-3 border-b-[3px] px-2 border-nightRider dark:border-white"
                 >
                     <h2
                         class="text-lg md:text-2xl text-nightRider dark:text-white font-semibold uppercase"
@@ -128,9 +129,9 @@
                 </div>
 
                 <!-- Card Section 01 -->
-                <section class="space-y-5">
+                <section class="space-y-6">
                     <h3
-                        class="text-nightRider dark:text-white text-xl md:text-2xl my-4 md:mt-8 font-bold"
+                        class="text-nightRider dark:text-white text-xl md:text-2xl mt-5 md:mt-8 font-bold"
                     >
                         Individual Stocks
                     </h3>
@@ -431,7 +432,7 @@
             <!-- Features Section -->
             <section class="col-span-full lg:col-span-3">
                 <h2
-                    class="md:pb-3 border-b-[3px] px-2 border-nightRider dark:border-white text-lg md:text-2xl text-nightRider dark:text-white font-semibold uppercase"
+                    class="pb-3 border-b-[3px] px-2 border-nightRider dark:border-white text-lg md:text-2xl text-nightRider dark:text-white font-semibold uppercase"
                 >
                     Featured
                 </h2>
@@ -497,7 +498,7 @@
                 </div>
 
                 <!-- img gallery -->
-                <div class="mt-5">
+                <div class="mt-5 px-0 sm:px-24 lg:px-0">
                     <img
                         class="w-full object-cover"
                         src="./src/img/feature_01.jpg"
@@ -512,7 +513,7 @@
                 </div>
 
                 <!-- img gallery -->
-                <div class="mt-5">
+                <div class="mt-5 px-0 sm:px-24 lg:px-0">
                     <img
                         class="w-full object-cover"
                         src="./src/img/feature_02.jpg"
@@ -527,7 +528,7 @@
                 </div>
 
                 <!-- img gallery -->
-                <div class="mt-5">
+                <div class="mt-5 px-0 sm:px-24 lg:px-0">
                     <img
                         class="w-full object-cover"
                         src="./src/img/feature_03.jpg"
